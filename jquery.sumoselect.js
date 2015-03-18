@@ -1,4 +1,4 @@
-﻿/*!
+/*!
  * jquery.sumoselect - v1.2.0
  * http://hemantnegi.github.io/jquery.sumoselect
  * 2014-04-08
@@ -221,7 +221,9 @@
                         evt.stopPropagation();
                     });
 
-                    //O.backdrop.click(function () { O.hideOpts(); });
+		    O.E.on('focusout', function () {
+                        O.optDiv.removeClass('open');
+                    });
 
                     O.E.on('blur', function () {
                         O.optDiv.removeClass('open');
